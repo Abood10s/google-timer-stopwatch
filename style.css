@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100vh;
+}
+
+.active {
+    background-color: #092b58;
+    color: #fff;
+    border: 2px solid greenyellow;
+    border-radius: 5px;
+}
+
+#timer {
+    font-size: 30px;
+    width: 50%;
+    text-align: center;
+    padding: 1em;
+    border: 2px #aaa solid;
+    margin-top: -80px;
+    border-radius: 10px 10px 0 0;
+}
+
+.buttons {
+    padding: 1em;
+    display: flex;
+    justify-content: space-around;
+    border: 2px solid #aaa;
+    border-radius: 0px 0px 10px 10px;
+    width: 50%;
+}
+
+button {
+    margin: 1rem 0;
+    padding: 0.6em 1.6em;
+    cursor: pointer;
+    background-color: #1a73e8;
+    color: #fff;
+    border-radius: 3px;
+    border: none;
+    transition: all 0.1s ease;
+}
+
+span {
+    text-align: center;
+}
+
+.spanBlock {
+    display: block;
+}
+
+.form {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    width: 25%;
+    height: 400px;
+    background-color: #1a73e8;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    color: #fff;
+}
+
+input {
+    outline: none;
+    padding: 0.5rem;
+    margin: 1rem;
+    font-size: 15px;
+    font-weight: bold;
+    width: 25%;
+    color: #1a73e8;
+}
+
+#start {
+    background-color: #1a73e8;
+    color: #fff;
+    padding: 0.5rem;
+    border: #fff 1px solid;
+    width: 80px;
+}
+
+.title {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 2rem;
+    color: #1a73e8;
+    font-size: 20px;
+    border-bottom: 3px solid #1a73e8;
+}
+
+.stop-watch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10em;
+    font-size: 30px;
+}
+
+.tabs {
+    text-align: center;
+    position: fixed;
+    top: 90px;
+    left: 0;
+    right: 0;
+}
+
+button:active {
+    background-color: rgb(194, 192, 192);
+}
