@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Timer || Stop-Watch</title>
+</head>
+
+<body>
+    <div class="tabs">
+        <button id="show-timer">Google Timer</button>
+        <button id="show-stopwatch">Google Stop Watch</button>
+    </div>
+    <div class="google-timer" id="google-timer">
+        <h4 class="title">Google Timer</h4>
+        <div class="form" id="form">
+            <p>Enter minutes</p>
+            <input type="number" min="0" id="minsinput">
+            <div><button id="start">Start</button></div>
+        </div>
+        <div class="cont">
+
+            <div class="container">
+
+                <div id="timer">
+
+                </div>
+                <div class="buttons">
+                    <div> <button id="pause">Pause</button> </div>
+                    <div> <button id="reset">reset</button> </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <div class="stop-watch" id="stop-watch">
+        <h4 class="title">Google StopWatch</h4>
+        <div>
+            <div id="timeDisplay">00:00:00</div>
+
+        </div>
+        <div><button id="startBtn" class="timerBtn">Start</button>
+            <button id="pauseBtn" class="timerBtn">Pause</button>
+            <button id="resetBtn" class="timerBtn">Reset</button></div>
+
+
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
