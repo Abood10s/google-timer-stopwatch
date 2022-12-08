@@ -61,12 +61,7 @@ start.addEventListener("click", () => {
         let seconds = time % 60;
         seconds = seconds < 10 ? "0" + seconds : seconds;
         timer.textContent = `${minutes}m : ${seconds}s `;
-        if (time !== 00 && seconds !== 00) {
-      time--;
-    } else {
-      timer.style.color = "red";
-      alert("timer Ended!");
-    }
+     
       }
       interval = setInterval(updateTimer, 1000);
     } else {
