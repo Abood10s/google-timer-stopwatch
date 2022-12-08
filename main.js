@@ -7,15 +7,17 @@ const show_timer = document.getElementById("show-timer");
 const show_stop = document.getElementById("show-stopwatch");
 const the_timer = document.getElementById("google-timer");
 const the_stop = document.getElementById("stop-watch");
+const entermins = document.getElementById("entermins");
+const secondsform = document.getElementById("secondsform");
+const secinput = document.getElementById("secinput");
+let minsinput = document.getElementById("minsinput");
+let pauseClicked = true;
+let startminutes = 0;
 
 /*********************************
             Timer
 *********************************/
 
-let minsinput = document.getElementById("minsinput");
-let pauseClicked = true;
-
-let startminutes = 10;
 the_timer.style.display = "none";
 show_timer.addEventListener("click", () => {
   show_timer.classList.add("active");
@@ -44,10 +46,17 @@ start.addEventListener("click", () => {
     let seconds = time % 60;
     seconds = seconds < 10 ? "0" + seconds : seconds;
     timer.textContent = `${minutes}m : ${seconds}s `;
-    time--;
+    if (time !== 00 && seconds !== 00) {
+      time--;
+    } else {
+      timer.style.color = "red";
+      alert("timer Ended!");
+    }
   }
   let interval = setInterval(updateTimer, 1000);
-  /***********************/
+  /***********************
+            pause button
+  ************************/
   pause.addEventListener("click", () => {
     pauseClicked = !pauseClicked;
     pause.id = "start";
@@ -72,7 +81,9 @@ start.addEventListener("click", () => {
       });
     }
   });
-
+  /***********************
+            reset button
+  ************************/
   reset.addEventListener("click", () => {
     time = startminutes * 60;
   });
